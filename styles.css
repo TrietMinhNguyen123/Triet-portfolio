@@ -1,10 +1,11 @@
-.background_1 {
-    position: fixed;
+.background {
+    position:fixed;
     left: 0;
     right: 0;
+    background-image: url(https://giffiles.alphacoders.com/215/215824.gif);
     top: 0;
     bottom: 0;
-    height: 100%;
+    height:auto;
     width: 100%;
     background-position-x: 30%;
     background-position-y: center;
@@ -13,17 +14,22 @@
 
 .axits_1 {
     position: absolute;
-    bottom: 0;
+    bottom: 0; 
     width: 105%;
+    max-width: 105%;
     height: auto;
     left: 0px;
-
+    background-repeat: no-repeat;
+    background-size: cover;
     z-index: 1;
 }
 
 body {
     overflow-y: scroll;
     overflow-x: hidden;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .My_name {
