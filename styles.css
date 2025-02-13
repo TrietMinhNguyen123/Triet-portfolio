@@ -1,35 +1,35 @@
 body {
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
     display: grid;
-
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .background {
-    /* position: relative; */
+    position: relative;
     background-image: url(images/background.gif);
-    /* width: 100%; */
-    display: flex;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
     background-size: cover;
     z-index: -1;
 }
 
 .nameLocation {
-    /* width: 100vw; */
-    /* position: relative; */
-    /* height: 100vh; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
+    width: 100vw; 
+    position: relative; 
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
     z-index: 3;
 }
 
 .My_name {
-    /* display: flex; */
+    display: flex;
     color: rgb(91, 89, 89);
     background-color: aliceblue;
     opacity: 90%;
@@ -40,7 +40,7 @@ body {
     border-radius: 98cm;
     font-family: serif;
     font-style: normal;
-    position: fixed;
+    position: relative;
     border: 5px solid black;
     height: auto;
     width: auto;
@@ -54,20 +54,44 @@ body {
     text-decoration: underline;
     font-family: serif;
     position: fixed;
+    font-weight: strong;
     right: 47%;
     top: 1%;
-    z-index: 3;
+    z-index: 4;
 }
 
 .project {
     color: black;
+    font-weight: strong;
     font-size: 25px;
     text-decoration: underline;
     font-family: serif;
     position: fixed;
     right: 33%;
     top: 1%;
+    z-index: 4;
+}
+
+.nav_bar {
+    background-color: white;
+    overflow: hidden;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
     z-index: 3;
+    opacity: 30%;
+    padding: -100px;
+    text-shadow: 0px 0px 20px rgb(255, 255, 163), 0px 0px 20px rgb(179, 179, 144), 0px 0px 900px rgb(255, 255, 255), 0px 0px 1600px rgb(253, 253, 226), 0px 0px 2800px rgb(255, 255, 255);
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 
@@ -77,9 +101,10 @@ body {
     text-decoration: underline;
     font-family: serif;
     position: fixed;
+    font-weight: strong;
     right: 19%;
     top: 1%;
-    z-index: 3;
+    z-index: 4;
 }
 
 
@@ -90,8 +115,9 @@ body {
     font-family: serif;
     position: fixed;
     right: 5%;
+    font-weight: strong;
     top: 1%;
-    z-index: 3;
+    z-index: 4;
 }
 
 .my_pic {
@@ -112,32 +138,22 @@ body {
 
 .arrow_1 {
     z-index: 3;
-    /* position: absolute; */
+    position: absolute;
     bottom: 15px;
     right: 40%;
 }
 
-#titleLocation {
+.titleLocation {
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.877), rgb(56, 44, 27));
     height: 100vh;
     width: 100vw;
-    background-color: white;
-    /* align-items: center; */
+    display: grid;
+    align-items: center;
+    background-size: cover;
     z-index: 3;
 }
 
 .aboutmeTitle {
     font-size: 30px;
     color: aliceblue;
-}
-
-.section {
-    height: 100vh;
-    width: 100%;
-    /* display: grid; */
-}
-
-.section-b {
-    background-color: rgb(255, 0, 0);
-    width: 500px;
-    display: grid;
 }
