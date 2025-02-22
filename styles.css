@@ -188,7 +188,7 @@ body {
     z-index: 2;
     display: flex;
     top: -60%;
-    left: -45%;
+    left: -25%;
 }
 
 .profile_pic1 {
@@ -324,37 +324,30 @@ body {
 
 
 .arrowright_location {
-    display: flex;
     position: relative;
     bottom: 50%;
     justify-content: flex-start;
     z-index: 1;
-    margin-left: 90%;
-    margin-bottom: 25%;
     align-content: center;
 
 }
 
 .arrow_right {
-    color: white;
-    height: 5vh;
-    width: 5vw;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    left:90%;
 }
 
-.arrowright_location {
-    display: flex;
+.arrow_location {
     position: relative;
-    bottom: 50%;
-    justify-content: flex-start;
+    bottom: 25vh;
     z-index: 1;
-    margin-right: 80%;
-    margin-bottom: 25%;
-    align-content: center;
-
 }
 
 .arrow_left {
-    color: white;
-    height: 5vh;
-    width: 5vw;
+    position:relative;
+    height: 40px;
+    width: 40px;
+    left: 7%;
 }
