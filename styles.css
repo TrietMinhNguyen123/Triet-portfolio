@@ -1,5 +1,6 @@
+/* General format of this program */
 body {
-    background: linear-gradient(to bottom, rgba(15, 4, 4, 0.943) 30%, rgb(116, 79, 0) 50%, rgba(15, 4, 4, 0.943)80%);
+    background: linear-gradient(to bottom, rgba(15, 4, 4, 0.943) 20%, rgb(116, 79, 0) 30%, rgba(15, 4, 4, 0.943)80%);
     overflow-y: scroll;
     overflow-x: hidden;
     display: grid;
@@ -9,7 +10,7 @@ body {
     width: 100%;
     margin: 0;
 }
-
+/* This is for the home page */
 .background {
     position: relative;
     background-image: url(images/background.gif);
@@ -128,7 +129,7 @@ body {
     bottom: 15px;
     right: 40%;
 }
-
+/* This is for about Me page */
 #about_mePage {
     /* height: 100vh; */
     width: 100vw;
@@ -248,7 +249,7 @@ body {
     opacity: 80%;
     border-radius: 98px;
 }
-
+/* This is for the project page */
 #projectPage {
     width: 100vw;
     display: grid;
@@ -350,4 +351,29 @@ body {
     height: 40px;
     width: 40px;
     left: 7%;
+}
+
+#socialPage {
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    background-size: cover;
+    z-index: 2;
+    margin-bottom: 20%;
+}
+
+.socialTitle_location {
+    width: 100vw;
+    justify-content: center;
+}
+
+.socialTitle {
+    font-size: 50px;
+    text-align: center;
+    height: 60px;
+    padding: 15px;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0), 0px 0px 20px rgb(232, 232, 232), 0px 0px 40px white;
 }
