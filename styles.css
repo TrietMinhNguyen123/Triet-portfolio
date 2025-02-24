@@ -1,4 +1,8 @@
 /* General format of this program */
+
+:hover{
+    cursor: context-menu;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -43,7 +47,7 @@ body {
     font-display: 100%;
     font-size: 55px;
     border-radius: 98cm;
-    font-family: sigmar;
+    font-family: serif;
     font-style: normal;
     position: relative;
     border: 5px solid black;
@@ -53,75 +57,76 @@ body {
     text-shadow: 0px 0px 20px rgb(255, 255, 163), 0px 0px 20px rgb(179, 179, 144), 0px 0px 900px rgb(255, 255, 255), 0px 0px 1600px rgb(253, 253, 226), 0px 0px 2800px rgb(255, 255, 255);
 }
 
-.about_me {
-    color: rgb(204, 175, 45);
-    font-size: 25px;
-    text-decoration: underline;
-    font-family: serif;
-    position: fixed;
-    font-weight: strong;
-    right: 47%;
-    top: 1%;
-    z-index: 4;
+.menu_items:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 20px rgb(255, 255, 163), 0px 0px 20px rgb(179, 179, 144), 0px 0px 900px rgb(255, 255, 255), 0px 0px 1600px rgb(253, 253, 226), 0px 0px 2800px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+
 }
 
-.project {
-    color: rgb(204, 175, 45);
-    font-weight: strong;
-    font-size: 25px;
+.menu_items.active{
+    color: rgb(255, 255, 255);
+    font-size: 26px;
     text-decoration: underline;
     font-family: serif;
-    position: fixed;
-    right: 33%;
-    top: 1%;
+    font-weight: strong;
+    border: 2px solid white;
+    padding: 3px;
     z-index: 4;
+    text-shadow: 0px 0px 20px rgb(255, 255, 163), 0px 0px 20px rgb(179, 179, 144), 0px 0px 900px rgb(255, 255, 255), 0px 0px 1600px rgb(253, 253, 226), 0px 0px 2800px rgb(255, 255, 255);
 }
 
-.nav_bar {
+
+nav{
     background-color: black;
     overflow: hidden;
     width: 100vw;
-    height: 50px;
+    height: 60px;
     position: fixed;
     top: 0;
     z-index: 3;
     opacity: 50%;
-    padding: -100px;
-    text-shadow: 0px 0px 20px rgb(94, 94, 88), 0px 0px 20px rgb(0, 0, 0), 0px 0px 900px rgb(204, 175, 45), 0px 0px 1600px rgb(253, 253, 226), 0px 0px 2800px rgb(255, 255, 255);
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    opacity: 50%;
+}
+.main_nav_bar {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.topnav a {
-    float: left;
-    color: rgb(204, 175, 45);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-
-.social {
+.logo{
     color: rgb(204, 175, 45);
     font-size: 25px;
     text-decoration: underline;
-    font-family: serif;
+    font-family: sigmar;
     position: fixed;
     font-weight: strong;
-    right: 19%;
-    top: 1%;
+    left: 3%;
     z-index: 4;
 }
 
+.nav_bar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-left: 40px;
+}
 
-.career {
+.menu_items{
     color: rgb(204, 175, 45);
     font-size: 25px;
     text-decoration: underline;
     font-family: serif;
-    position: fixed;
-    right: 5%;
     font-weight: strong;
-    top: 1%;
     z-index: 4;
 }
 
@@ -133,7 +138,6 @@ body {
 }
 /* This is for about Me page */
 #about_mePage {
-    /* height: 100vh; */
     width: 100vw;
     display: flex;
     align-items: center;
@@ -143,13 +147,14 @@ body {
 }
 
 .about_meLocation {
-    /* height: 80vh; */
     width: 100vw;
     display: grid;
     justify-content: center;
 }
 
 .aboutmeTitle {
+    position:relative;
+    top: 70%;
     font-size: 50px;
     text-align: center;
     height: 60px;
@@ -183,7 +188,7 @@ body {
     z-index: 1;
     left: 50%;
     display: flex;
-    top: 30%;
+    top: 50%;
 }
 
 .profile_pic1Location {
@@ -262,6 +267,8 @@ body {
 }
 
 .projectTitle_location {
+    position:relative;
+    top:70%;
     width: 100vw;
     justify-content: center;
 }
@@ -278,6 +285,8 @@ body {
 }
 
 .projectbox_location {
+    position: relative;
+    top: 30%;
     z-index: 1;
     margin-top: 5%;
     width: 100%;
@@ -287,6 +296,8 @@ body {
 }
 
 .projectbox_1 {
+    position:relative;
+    right: 6%;
     height: 10vh;
     width: 0px;
     background-color: wheat;
@@ -299,6 +310,8 @@ body {
 }
 
 .projectbox_2 {
+    display: flex;
+    position:relative;
     height: 10vh;
     width: 0px;
     background-color: wheat;
@@ -306,13 +319,14 @@ body {
     border-radius: 30px;
     padding: 8%;
     font-size: 30px;
-    margin-left: 10%;
     justify-content: center;
-    left: 50px;
+    left: 89px;
 
 }
 
 .projectbox_3 {
+    position: relative;
+    left: 6%;
     height: 10vh;
     width: 0px;
     background-color: wheat;
@@ -325,14 +339,13 @@ body {
 
 }
 
-
-.arrowright_location {
+.projectbox_1:hover,.projectbox_2:hover,.projectbox_3:hover{
     position: relative;
-    bottom: 50%;
-    justify-content: flex-start;
-    z-index: 1;
-    align-content: center;
-
+    bottom:5px;
+    cursor: pointer;
+    height: 11vh;
+    width: 1vh;
+    transition: width 0.5s, height 0.5s;
 }
 
 .arrow_right {
@@ -344,8 +357,8 @@ body {
 
 .arrow_location {
     position: relative;
-    bottom: 25vh;
-    z-index: 1;
+    bottom: 10vh;
+    z-index: 5;
 }
 
 .arrow_left {
@@ -354,6 +367,14 @@ body {
     width: 40px;
     left: 7%;
 }
+
+.arrow_left:hover,.arrow_right:hover{
+    size: 10px;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s;
+}
+
+/* This is for the social page */
 
 #socialPage {
     width: 100vw;

@@ -7,24 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triet Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-
 </head>
 
 <body>
-    <div class="nav_bar">
-        <a href= "#about_mePage" class="about_me">About me</a>
-        <a href="#projectPage" class="project">Project</a>
-        <a class="social">Social</a>
-        <a class="career">Career</a>
-    </div>
-    <div class="background">
-        <div class="nameLocation">
-            <div class="My_name">Triet's Portfolio</div>
+    <nav>
+        <div class="main_nav_bar">
+            <a class="logo">Triet's Portfolio</a>
+            <ul class="nav_bar">
+                <li class="nav_items">
+                    <a href="#Home" class="menu_items active">Home</a>
+                </li>
+                <li class="nav_items">
+                    <a href= "#about_mePage" class="menu_items">About me</a>
+                </li>
+                <li class="nav_items">
+                    <a href="#projectPage" class="menu_items">Project</a>
+                </li>
+                <li class="nav_items">
+                    <a class="menu_items">Social</a>
+                </li>
+                <li class="nav_items">
+                    <a class="menu_items">Career</a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
+    <section id = "Home">
+        <div class="background">
+            <div class="nameLocation">
+                <div class="My_name">Triet's Portfolio</div>
+            </div>
+        </div>
+    </section>
     <section id="about_mePage">
         <div class="about_meLocation">
             <div class="aboutmeTitle">
@@ -83,6 +100,7 @@
             <div class="socialTitle">Social</div>
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>
