@@ -21,7 +21,7 @@ function scrollTracker() {
         Aboutme_elementsRight.forEach(element => {
             element.classList.remove('fading_right');
         });
-    } else if (currentsYScroll > 900 || currentsYScroll <= 430) {
+    } else {
         console.log("heloooo");
         // If the scroll is past 1000px or back below 430px, reapply fading classes
             Aboutme_elementsLeft.forEach(element => {

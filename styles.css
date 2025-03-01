@@ -16,11 +16,13 @@ body {
 
 .fading_left {
     transform: translateX(-400px);
+    opacity: 0;
     transition: 3s;
 }
 
 .fading_right {
     transform: translateX(400px);
+    opacity: 0;
     transition: 3s;
 }
 
