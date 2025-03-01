@@ -16,16 +16,6 @@ function scrollTracker() {
     });
 };
 
-function isElementInViewport(el) {
-const rect = el.getBoundingClientRect();
-return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-);
-}
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -36,13 +26,11 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('fading_left');
         }
     })
-},
-{
-    rootMargin: '40px'
 });
 
 const fadeElements = document.querySelectorAll('.fading_right, .fading_left');
 
 fadeElements.forEach((element) => {
-    observer.observe(element)
-})
+    observer.observe(element);
+});
+
