@@ -1,5 +1,20 @@
 /* General format of this program -----------------------------------------------------------------------------*/
 /* This is a simple website that is designed to showcase my skills and projects. It is a simple website that is */
+@keyframes zoomIn {
+    from {
+        transform: scale(100);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 1.5s ease-in-out;
+}
+
 * {
     scroll-behavior: smooth;}
 body {
@@ -11,6 +26,12 @@ body {
     align-items: center;
     width: 100%;
     margin: 0;
+}
+
+.fading_up{
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: 1s;
 }
 
 .fading_left {
@@ -46,15 +67,9 @@ body {
     z-index: 3;
 }
 
-.name_animation{
-    display: flex;
-    font-size: 1000px;
-    opacity: 1;
-    font-weight: 100%;
-    transition:3s;
-}
 
-.My_name {
+
+.My_name{
     display: flex;
     color: rgb(91, 89, 89);
     background-color: aliceblue;
@@ -159,6 +174,7 @@ nav {
 #about_mePage {
     position: relative;
     width: 100vw;
+    margin-top: 20%;
     height: 185vh;
     margin-bottom: 10% ;
     display: flex;
@@ -171,6 +187,7 @@ nav {
     width: 100vw;
     display: grid;
     justify-content: center;
+    transition: 3s;
 }
 
 .aboutmeTitle {
@@ -322,6 +339,7 @@ nav {
     top: 70%;
     width: 100vw;
     justify-content: center;
+    transition: 3s;
 }
 
 .projectTitle {
@@ -344,6 +362,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 3s;
 }
 
 .projectbox_1 {
@@ -421,11 +440,12 @@ nav {
     left: 7%;
 }
 
-.arrow_left:hover,
-.arrow_right:hover {
-    size: 10px;
+.arrow_left:active,
+.arrow_right:active {
+    height: 50px;
+    width: 50px;
     cursor: pointer;
-    transition: width 0.3s, height 0.3s;
+    transition: width 1s, height 1s;
 }
 
 /* This is for the social page */

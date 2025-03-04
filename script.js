@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const myNameInput = document.querySelector('.My_name');
+    if (myNameInput) {
+        myNameInput.classList.add('zoom-in');
+    }
+});
+
+
+
 const sections = document.querySelectorAll('section[id]');
 
 function scrollTracker() {
@@ -16,21 +25,53 @@ function scrollTracker() {
     });
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer_right = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.remove('fading_right');
-            entry.target.classList.remove('fading_left');
         } else {
             entry.target.classList.add('fading_right');
+        }
+    })
+});
+// This is for the right fading effect
+const fadeElements_right = document.querySelectorAll('.fading_right');
+
+fadeElements_right.forEach((element) => {
+    observer_right.observe(element);
+});
+
+// This is for the left fading effect
+const observer_left = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('fading_left');
+        } else {
             entry.target.classList.add('fading_left');
         }
     })
 });
 
-const fadeElements = document.querySelectorAll('.fading_right, .fading_left');
-
-fadeElements.forEach((element) => {
-    observer.observe(element);
+const fadeElements_left = document.querySelectorAll('.fading_left');
+    fadeElements_left.forEach((element) => {
+        observer_left.observe(element);
+    });
+// This is for the up fading effect
+const observer_up = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('fading_up');
+        } else {
+            entry.target.classList.add('fading_up');
+        }
+    })
 });
 
+
+const fadeElements_up = document.querySelectorAll('.fading_up');
+
+fadeElements_up.forEach((element) => {
+    observer_up.observe(element);
+});
+
+window.addEventListener('scroll', scrollTracker);
