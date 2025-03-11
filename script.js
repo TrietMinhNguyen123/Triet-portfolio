@@ -11,7 +11,7 @@ const sections = document.querySelectorAll('section[id]');
 
 function scrollTracker() {
     const currentsYScroll = window.scrollY;
-    console.log(currentsYScroll);
+    // console.log(currentsYScroll);
     sections.forEach((section) => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 50;
@@ -74,4 +74,9 @@ fadeElements_up.forEach((element) => {
     observer_up.observe(element);
 });
 
+const arrow_left = document.querySelector('.arrow_left');
+
+
+
 window.addEventListener('scroll', scrollTracker);
+

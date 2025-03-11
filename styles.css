@@ -5,6 +5,7 @@
         transform: scale(100);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -16,7 +17,9 @@
 }
 
 * {
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(to bottom, rgba(15, 4, 4, 0.943) 20%, rgb(116, 79, 0) 30%, rgba(15, 4, 4, 0.943)80%);
     overflow-y: scroll;
@@ -28,7 +31,7 @@ body {
     margin: 0;
 }
 
-.fading_up{
+.fading_up {
     transform: translateY(-40px);
     opacity: 0;
     transition: 1s;
@@ -69,7 +72,7 @@ body {
 
 
 
-.My_name{
+.My_name {
     display: flex;
     color: rgb(91, 89, 89);
     background-color: aliceblue;
@@ -176,7 +179,7 @@ nav {
     width: 100vw;
     margin-top: 20%;
     height: 185vh;
-    margin-bottom: 10% ;
+    margin-bottom: 10%;
     display: flex;
     align-items: center;
     background-size: cover;
@@ -187,6 +190,7 @@ nav {
     width: 100vw;
     display: grid;
     justify-content: center;
+    position: relative;
     transition: 3s;
 }
 
@@ -199,12 +203,15 @@ nav {
     position: relative;
     font-family: 'Times New Roman', Times, serif;
     color: aliceblue;
-    bottom:14vh;
+    bottom: 20vh;
     text-shadow: 0px 0px 20px rgb(0, 0, 0), 0px 0px 20px rgb(232, 232, 232), 0px 0px 40px white;
 }
 
 .Aboutme_contain {
     display: grid;
+    position: relative;
+    bottom: 30%;
+    margin-top: 20%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 }
@@ -242,11 +249,8 @@ nav {
 }
 
 .aboutMe_textbox1_Location {
-    /* position: relative;
-    z-index: 1;
-    left: 50%;
-    display: flex;
-    top: 50%; */
+    display: grid;
+    align-items: center;
     grid-row: 1;
     grid-column: 2;
     transition: 3s;
@@ -275,10 +279,8 @@ nav {
 }
 
 .aboutMe_textbox2_Location {
-    /* z-index: 1;
-    left: 50%;
-    display: flex;
-    top: 80%; */
+    display: grid;
+    align-items: center;
     grid-column: 1;
     grid-row: 2;
     transition: 3s;
@@ -286,6 +288,7 @@ nav {
 }
 
 .aboutMe_textbox2 {
+
     border: 5px solid white;
     border-radius: 30px;
     width: 30vw;
@@ -329,8 +332,6 @@ nav {
     width: 100vw;
     display: grid;
     align-items: center;
-    background-size: cover;
-    z-index: 2;
     margin-bottom: 20%;
 }
 
@@ -355,19 +356,17 @@ nav {
 
 .projectbox_location {
     position: relative;
-    top: 30%;
+    top: 40%;
     z-index: 1;
     margin-top: 5%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     transition: 3s;
 }
 
 .projectbox_1 {
-    position: relative;
-    right: 6%;
     height: 10vh;
     width: 0px;
     background-color: wheat;
@@ -380,8 +379,6 @@ nav {
 }
 
 .projectbox_2 {
-    display: flex;
-    position: relative;
     height: 10vh;
     width: 0px;
     background-color: wheat;
@@ -390,13 +387,10 @@ nav {
     padding: 8%;
     font-size: 30px;
     justify-content: center;
-    left: 89px;
 
 }
 
 .projectbox_3 {
-    position: relative;
-    left: 6%;
     height: 10vh;
     width: 0px;
     background-color: wheat;
@@ -404,7 +398,6 @@ nav {
     border-radius: 30px;
     padding: 8%;
     font-size: 30px;
-    margin-left: 10%;
     justify-content: center;
 
 }
@@ -421,31 +414,39 @@ nav {
 }
 
 .arrow_right {
-    position: relative;
+    position: absolute;
     height: 40px;
     width: 40px;
     left: 90%;
-}
-
-.arrow_location {
-    position: relative;
-    bottom: 10vh;
     z-index: 5;
 }
 
+.arrow_right_location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.arrow_left_location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .arrow_left {
-    position: relative;
+    position: absolute;
     height: 40px;
     width: 40px;
     left: 7%;
+    z-index: 5;
 }
 
-.arrow_left:active,
-.arrow_right:active {
-    height: 50px;
+.arrow_left:hover,
+.arrow_right:hover {
+    height: 60px;
     width: 50px;
     cursor: pointer;
-    transition: width 1s, height 1s;
+    transition: width 0.5s, height 0.5s;
 }
 
 /* This is for the social page */
