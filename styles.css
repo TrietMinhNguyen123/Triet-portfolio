@@ -12,6 +12,20 @@
     }
 }
 
+@keyframes drop {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 .zoom-in {
     animation: zoomIn 1.5s ease-in-out;
 }
@@ -337,7 +351,7 @@ nav {
 
 .projectTitle_location {
     position: relative;
-    top: 70%;
+    top: 11vh;
     width: 100vw;
     justify-content: center;
     transition: 3s;
@@ -419,6 +433,16 @@ nav {
     width: 40px;
     left: 90%;
     z-index: 5;
+}
+
+.arrow {
+    position: relative;
+    bottom: 4vh;
+}
+
+.arrow_right:active,
+.arrow_left:active {
+    animation: drop 1s;
 }
 
 .arrow_right_location {
