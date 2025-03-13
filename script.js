@@ -77,6 +77,27 @@ fadeElements_up.forEach((element) => {
 const arrow_left = document.querySelector('.arrow_left');
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    function left_click() {
+        const box_location = document.querySelector(".projectbox_location");
+        box_location.style.transform = box_location.style.transform + "translateX(30%)";
+        console.log('Left click');
+    };
+    
+    function right_click(){
+        console.log('Right click');
+        const box_location = document.querySelector(".projectbox_location");
+        box_location.style.transform = box_location.style.transform + "translateX(-30%)";
+    }; 
+    
+    const left_arrow = document.querySelector(".arrow_left").addEventListener("click", left_click )
+    const right_arrow = document.querySelector(".arrow_right").addEventListener("click", right_click)
+    console.log(left_arrow, right_arrow)
+
+
+
+});
+
 
 window.addEventListener('scroll', scrollTracker);
 
