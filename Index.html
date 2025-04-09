@@ -85,10 +85,6 @@
 
         </div>
     </section>
-
-
-
-
     <section id="projectPage">
         <div class="projectTitle_location fading_up">
             <div class="projectTitle"> Project</div>
@@ -115,6 +111,7 @@
             <div class="information_project">Information</div>
         </div>
     </section>
+    <!-- <canvas id="canvas3d"></canvas> -->
 
     <!-- <div class="box-container">
         <div class="caoursel">
@@ -130,8 +127,10 @@
             <div class="socialTitle">Social</div>
         </div>
     </section> -->
+    <div style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;">
+        <spline-viewer url="https://prod.spline.design/a0yzNAS0UWHWQx6l/scene.splinecode"></spline-viewer></div>
     <script  src="script.js"></script>
-    <script type="module" src="spline.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
 </body>
 
 </html>

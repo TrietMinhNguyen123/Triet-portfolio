@@ -35,7 +35,8 @@
 }
 
 body {
-    background: linear-gradient(to bottom, rgba(15, 4, 4, 0.943) 20%, rgb(116, 79, 0) 30%, rgba(15, 4, 4, 0.943)80%);
+    background: linear-gradient(to bottom, rgba(15, 4, 4, 0.943) 20%, rgb(61, 42, 0) 30%, rgba(15, 4, 4, 0.943)80%);
+    box-shadow: 50px, 50px, 50px black ;
     overflow-y: scroll;
     overflow-x: hidden;
     display: grid;
@@ -43,6 +44,7 @@ body {
     align-items: center;
     width: 100%;
     margin: 0;
+    z-index: 1;
 }
 
 .fading_up {
@@ -71,7 +73,7 @@ body {
     height: 100vh;
     display: grid;
     background-size: cover;
-    z-index: -1;
+    z-index: 1;
 }
 
 .nameLocation {
@@ -243,7 +245,7 @@ nav {
     font-weight: 10px;
     font-family: 'Times New Roman', Times, serif;
     height: 33vh;
-    opacity: 90%;
+    opacity: 100%;
     background-color: rgb(74, 66, 66);
     text-shadow: 0px 0px 20px rgb(0, 0, 0), 0px 0px 10px rgb(236, 236, 32), 0px 0px 40px white;
 }
@@ -288,7 +290,7 @@ nav {
     height: 50vh;
     width: auto;
     border: 5px solid whitesmoke;
-    opacity: 80%;
+    opacity: 100%;
     border-radius: 98px;
 }
 
@@ -315,7 +317,7 @@ nav {
     font-weight: 10px;
     font-family: 'Times New Roman', Times, serif;
     height: 33vh;
-    opacity: 90%;
+    opacity: 100%;
     background-color: rgb(74, 66, 66);
     text-shadow: 0px 0px 20px rgb(0, 0, 0), 0px 0px 10px rgb(236, 236, 32), 0px 0px 40px white;
 }
@@ -337,7 +339,7 @@ nav {
     height: 50vh;
     width: auto;
     border: 5px solid whitesmoke;
-    opacity: 80%;
+    opacity: 100%;
     border-radius: 98px;
 }
 

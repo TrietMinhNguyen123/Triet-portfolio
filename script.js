@@ -9,7 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+const observe_nav = new IntersectionObserver((entries) => {
+        if (entry.isIntersecting && window.scrollY === 100) {
+            console.log('Display')
+            style = "opacity: 1"
+        }
+});
 
 const sections = document.querySelectorAll('section[id]');
 
